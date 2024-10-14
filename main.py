@@ -1,20 +1,13 @@
-from application.train_model import TrainModel
-from application.predict_sentiment import PredictSentiment
-from core.entities import Review
-
 import sys
 import os
 import numpy as np
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from transformers import pipeline
 from core.entities import Review
 from application.train_model import TrainModel
 from application.predict_sentiment import PredictSentiment
-
-
-
-from transformers import pipeline
 
 def generate_reviews(num_samples: int):
     # Initialize the GPT-2 text generation model
